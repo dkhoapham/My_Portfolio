@@ -1,13 +1,49 @@
+:root {
+  --background-color: 253, 225, 197;
+
+  --background-nav: 220, 225, 177;
+
+  --primary-text: 58, 46, 42;
+  --secondary-text: 253, 225, 197;
+
+  --shadow: 0, 53, 97;
+
+  --accent: 0, 95, 143;
+  --accent-hover: 0, 53, 97;
+
+  --border: 228, 203, 179;
+  --nav-txt: 1, 43, 71;
+}
+
+.dark {
+  --background-color: 0, 53, 97;
+
+  --background-nav: 45, 36, 87;
+
+  --primary-text: 253, 225, 197;
+  --secondary-text: 0, 53, 97;
+
+  --shadow: 197, 225, 252;
+
+  --accent: 255, 178, 124;
+  --accent-hover: 253, 225, 197;
+
+  --border: 10, 74, 122;
+  --nav-txt: 253, 225, 197;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: "Indie Flower", cursive;
   line-height: 1.5;
   font-weight: 400;
 
-  background-color: rgb(13 17 33);
+  background-color: rgb(var(--background-color));
   background-image: url("../global/bg_noise.svg");
   background-repeat: repeat;
   background-size: 77px 77px;
-  background-blend-mode: soft-light;
+  background-blend-mode: multiply;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

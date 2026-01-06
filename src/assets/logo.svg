@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97.6 28.92" fill="currentColor">
+  <g id="Layer_2" data-name="Layer 2">
+    <text transform="translate(0 19.95)" style="font-family: MarkerFelt-Thin, 'Marker Felt'; font-size: 20.61px; font-weight: 200;"><tspan x="0" y="0" style="letter-spacing: .03em;">d</tspan><tspan x="9.52" y="0" style="letter-spacing: .04em;">k</tspan><tspan x="20.22" y="0" style="letter-spacing: .06em;">h</tspan><tspan x="31.06" y="0" style="letter-spacing: .05em;">o</tspan><tspan x="40.58" y="0" style="letter-spacing: .03em;">a</tspan><tspan x="50.7" y="0" style="letter-spacing: .03em;">p</tspan><tspan x="60.11" y="0" style="letter-spacing: .06em;">h</tspan><tspan x="71.02" y="0">am</tspan></text>
+  </g>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M46.32,5.78h.58c.32,0,.58-.26.58-.58v-2.89c0-.32.26-.58.58-.58h47.24c.32,0,.58.26.58.58v24.3c0,.32-.26.58-.58.58h-47.24c-.32,0-.58-.26-.58-.58v-2.89c0-.32-.26-.58-.58-.58h-.58c-.32,0-.58.26-.58.58v4.05c0,.64.52,1.16,1.15,1.16h49.55c.64,0,1.15-.52,1.15-1.16V1.16c0-.64-.52-1.16-1.15-1.16h-49.55c-.64,0-1.15.52-1.15,1.16v4.05c0,.32.26.58.58.58Z"/>
+  </g>
+</svg>
