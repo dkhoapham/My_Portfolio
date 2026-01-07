@@ -2,7 +2,11 @@ import "./styles/global/index.css";
 import Navbar from "./components/Navbar/Navbar";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 }
 
 export default App;
