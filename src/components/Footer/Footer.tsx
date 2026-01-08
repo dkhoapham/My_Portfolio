@@ -12,7 +12,7 @@ function Footer() {
         justifyContent: "center",
       }}
     >
-      <p style={{ fontSize: "13px", color: "rgb(var(--nav-txt))" }}>
+      <p style={{ fontSize: "12px", color: "rgb(var(--nav-txt))" }}>
         &copy; {new Date().getFullYear()} Khoa Pham. All Rights Reserved.
       </p>
     </footer>

@@ -1,14 +1,15 @@
+import Main from "./components/layout/main";
 import "./styles/global/index.css";
-import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
 
-function App() {
-  return (
-    <>
-      <Navbar />
-      <Footer />
-    </>
-  );
+/*export const metadata: Metadata = {
+  title: "Khoa Pham",
+  description: "Khoa Pham's Portfolio Website",
+  openGraph: {
+    title: "Khoa Pham",
+    description: "Khoa Pham's Portfolio Website",
+  },
+};*/
+
+export default function App({ children }: { children: React.ReactNode }) {
+  return <Main>{children}</Main>;
 }
-
-export default App;

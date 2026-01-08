@@ -52,7 +52,7 @@
   align-items: center;
   position: relative;
   transition: background 0.1s ease, backdrop-filter 0.1s ease,
-    box-shadow 0.1s ease, transform 0.1s ease, opacity 0.25s ease;
+    box-shadow 0.1s ease, transform 0.1s ease, opacity 0.2s ease;
 }
 
 .nav_links li.fade-out {
