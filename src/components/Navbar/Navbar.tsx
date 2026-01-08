@@ -1,19 +1,48 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { useEffect, useRef, useState } from "react";
 import Logo from "../../assets/logo.svg?react";
 import "./navbar.css";
 
 function Navbar() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const currentPath = location.pathname || "/";
+    const oldActive = document.querySelector(".nav_links li.active");
+    const newActive = [...document.querySelectorAll(".nav_links li")].find(
+      (li) => {
+        const a = li.querySelector("a");
+        return a && a.getAttribute("href") === currentPath;
+      }
+    );
+    if (oldActive && oldActive !== newActive) {
+      oldActive.classList.add("fade-out");
+
+      setTimeout(() => {
+        oldActive.classList.remove("fade-out");
+        oldActive.classList.remove("active");
+
+        if (newActive) newActive.classList.add("active");
+      }, 150); // match CSS fade-out duration
+
+      return;
+    }
+    if (newActive) newActive.classList.add("active");
+  }, [location.pathname]);
+
   const [dark, setDark] = useState(
     document.documentElement.classList.contains("dark")
   );
 
   const toggleTheme = () => {
     const html = document.documentElement;
-    const newDark = html.classList.toggle("dark");
-    localStorage.theme = newDark ? "dark" : "light";
-    setDark(newDark);
+    setTimeout(() => {
+      const newDark = html.classList.toggle("dark");
+      localStorage.theme = newDark ? "dark" : "light";
+
+      setDark(newDark);
+    }, 100);
 
     const btn = document.querySelector(".theme_toggle_btn") as HTMLElement;
     if (btn) {
