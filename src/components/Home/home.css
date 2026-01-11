@@ -1,0 +1,177 @@
+:root {
+  --gmail: rgb(255, 255, 247);
+  --gmail-bg: rgb(234, 67, 53);
+  --gmail-bg-hover: rgb(187, 0, 27);
+
+  --github: rgb(255, 255, 255);
+  --github-bg: rgb(33, 31, 31);
+  --github-bg-hover: #000000;
+
+  --linkedin: rgb(225, 225, 225);
+  --linkedin-bg: rgb(0, 119, 181);
+  --linkedin-bg-hover: rgb(0, 97, 146);
+
+  --resume: rgb(24, 44, 67);
+  --resume-bg: rgb(46, 204, 113);
+  --resume-bg-hover: rgb(36, 174, 96);
+}
+
+.dark {
+  --gmail: rgb(255, 255, 247);
+  --gmail-bg: rgb(187, 0, 27);
+  --gmail-bg-hover: rgb(234, 67, 53);
+
+  --github: rgb(255, 255, 255);
+  --github-bg: #000000;
+  --github-bg-hover: rgb(33, 31, 31);
+
+  --linkedin: rgb(225, 225, 225);
+  --linkedin-bg: rgb(0, 97, 146);
+  --linkedin-bg-hover: rgb(0, 119, 181);
+
+  --resume: rgb(24, 44, 67);
+  --resume-bg: rgb(36, 174, 96);
+  --resume-bg-hover: rgb(46, 204, 113);
+}
+
+.bodyHome {
+  width: 100%;
+  height: 90.5vh;
+  color: var(--primary-text);
+}
+
+.hero {
+  width: 100%;
+  margin-top: 27vh;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.socialLinks {
+  margin: auto;
+  margin-top: 5px;
+  width: 300px;
+  gap: 17px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.gmailBtn,
+.githubBtn,
+.linkedinBtn,
+.resumeBtn {
+  cursor: pointer;
+  border-radius: 15px;
+  border: transparent;
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gmailBtn {
+  background-color: var(--gmail-bg);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.gmailBtn:hover {
+  background-color: var(--gmail-bg-hover);
+  transform: scale(1.05);
+}
+
+.gmailBtn:hover .gmail {
+  color: var(--gmail);
+}
+
+.gmail {
+  color: var(--gmail);
+  background: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.githubBtn {
+  background-color: var(--github-bg);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.githubBtn:hover {
+  background-color: var(--github-bg-hover);
+  transform: scale(1.05);
+}
+
+.githubBtn:hover .github {
+  color: var(--github);
+}
+
+.github {
+  color: var(--github);
+  background: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.linkedinBtn {
+  background-color: var(--linkedin-bg);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.linkedinBtn:hover {
+  background-color: var(--linkedin-bg-hover);
+  transform: scale(1.05);
+}
+
+.linkedinBtn:hover .linkedin {
+  color: var(--linkedin);
+}
+
+.linkedin {
+  color: var(--linkedin);
+  background: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.resumeBtn {
+  background-color: var(--resume-bg);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.resumeBtn:hover {
+  background-color: var(--resume-bg-hover);
+  transform: scale(1.05);
+}
+
+.resumeBtn:hover .resume {
+  color: var(--resume);
+}
+
+.resume {
+  color: var(--resume);
+  background: transparent;
+  transition: color 0.3s ease-in-out;
+}
+
+.navToAbout {
+  cursor: pointer;
+  background-color: rgba(var(--background-nav), 0.8);
+  font-family: MarkerFelt-Thin, "Marker Felt";
+  color: var(--primary-text);
+  font-size: 16px;
+  border-radius: 50px;
+  height: 33px;
+  width: 150px;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: transparent;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navToAbout:hover {
+  background-color: rgba(var(--accent-hover), 0.6);
+  transform: scale(1.05);
+}

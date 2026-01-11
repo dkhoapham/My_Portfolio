@@ -4,7 +4,7 @@ function Footer() {
       style={{
         bottom: 0,
         width: "100%",
-        height: "33px",
+        height: "4vh",
         display: "flex",
         position: "fixed",
         textAlign: "center",
