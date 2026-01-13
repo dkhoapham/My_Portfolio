@@ -1,0 +1,69 @@
+:root {
+  --download-bg: 170, 110, 80;
+  --download-bg-hover: 180, 60, 60;
+  --download-icon: 155, 255, 130;
+}
+
+.dark {
+  --download-bg: 5, 5, 25;
+  --download-bg-hover: 65, 100, 225;
+  --download-icon: 155, 255, 130;
+}
+
+.bodyResume {
+  width: 100%;
+  height: 89.4vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.titleResume {
+  margin: 0;
+  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
+}
+
+.downloadBtnResume {
+  margin-bottom: 11px;
+  height: 27px;
+  width: 100px;
+  border: none;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 77px;
+  font-family: MarkerFelt-Thin, "Marker Felt";
+  color: rgb(var(--primary-text));
+  background-color: rgba(var(--download-bg), 0.3);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.downloadIcon {
+  transition: color 0.3s ease-in-out;
+}
+
+.downloadBtnResume:hover .downloadIcon {
+  color: rgb(var(--download-icon));
+}
+
+.downloadBtnResume:hover {
+  background-color: rgba(var(--download-bg-hover), 0.6);
+  transform: scale(1.05);
+}
+
+.frameResume {
+  width: 555px;
+  height: 670px;
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
+  border: 3px black solid;
+}
+
+@media screen and (max-width: 860px) {
+  .frameResume {
+    width: 400px;
+    height: 500px;
+  }
+}
