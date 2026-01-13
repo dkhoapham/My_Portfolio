@@ -97,3 +97,12 @@ export function navHoverAnimation() {
 
   return btnRef;
 }
+
+export function preloadResume(resumeLink: string) {
+  const iframe = document.createElement("iframe");
+  iframe.src = resumeLink;
+  iframe.style.display = "none";
+  iframe.loading = "eager";
+  document.body.appendChild(iframe);
+  return () => iframe.remove();
+}

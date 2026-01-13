@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FiSun, FiMoon } from "react-icons/fi";
 import { LuFileUser } from "react-icons/lu";
@@ -8,7 +8,9 @@ import {
   mobileNav,
   navHoverAnimation,
   autoCloseNav,
+  preloadResume,
 } from "./script";
+import { resumeViewLink } from "../Resume/Resume";
 import Logo from "../../assets/logo.svg?react";
 import "./navbar.css";
 
@@ -22,6 +24,11 @@ function Navbar() {
   const navRef = autoCloseNav(setOpen);
   highlightNav();
   mobileNav();
+
+  useEffect(() => {
+    const cleanup = preloadResume(resumeViewLink);
+    return cleanup;
+  }, []);
 
   return (
     <header className="navClass">

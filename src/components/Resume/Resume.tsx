@@ -1,9 +1,9 @@
 import "./resume.css";
 import { FaDownload } from "react-icons/fa";
+export const resumeViewLink =
+  "https://drive.google.com/file/d/1AlzKkw0Y1pcZjp7jNk8hpJtXPfqqnrjG/preview";
 
 function Resume() {
-  const resumeViewLink =
-    "https://drive.google.com/file/d/1AlzKkw0Y1pcZjp7jNk8hpJtXPfqqnrjG/preview";
   const resumeDownLoadLink =
     "https://drive.google.com/uc?export=download&id=1AlzKkw0Y1pcZjp7jNk8hpJtXPfqqnrjG";
 
