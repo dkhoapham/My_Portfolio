@@ -1,8 +1,6 @@
 import "./home.css";
-import { LuFileUser } from "react-icons/lu";
 import { TbBrandLinkedin, TbMailbox, TbBrandGithub } from "react-icons/tb";
 import { useNavigate } from "react-router-dom";
-
 function Home() {
   const navigate = useNavigate();
 
@@ -23,7 +21,6 @@ function Home() {
             fontWeight: "100",
             fontSize: "60px",
             margin: "0",
-            marginTop: "3px",
           }}
         >
           I'm Khoa Pham!
@@ -53,17 +50,6 @@ function Home() {
             }
           >
             <TbBrandLinkedin size={30} className="linkedin" />
-          </button>
-          <button
-            className="resumeBtn"
-            onClick={() =>
-              window.open(
-                "https://drive.google.com/file/d/1AlzKkw0Y1pcZjp7jNk8hpJtXPfqqnrjG/view?usp=drive_link",
-                "_blank"
-              )
-            }
-          >
-            <LuFileUser size={30} className="resume" />
           </button>
         </div>
         <button className="navToAbout" onClick={() => navigate("/about")}>

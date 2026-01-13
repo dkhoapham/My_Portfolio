@@ -1,6 +1,5 @@
-import { useEffect } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useLocation } from "react-router-dom";
-import { useRef } from "react";
 
 export function highlightNav() {
   const location = useLocation();
@@ -51,6 +50,23 @@ export function mobileNav() {
       navbarToggle.removeEventListener("click", handleClick);
     };
   }, []);
+}
+
+export function autoCloseNav(setOpen: (v: boolean) => void) {
+  const navRef = useRef<HTMLUListElement | null>(null);
+
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [setOpen]);
+
+  return navRef;
 }
 
 export function navHoverAnimation() {

@@ -2,11 +2,10 @@ function Footer() {
   return (
     <footer
       style={{
-        bottom: 0,
         width: "100%",
         height: "4vh",
         display: "flex",
-        position: "fixed",
+        marginTop: "auto",
         textAlign: "center",
         alignItems: "center",
         justifyContent: "center",

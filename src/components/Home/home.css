@@ -5,15 +5,14 @@
 
   --github: rgb(255, 255, 255);
   --github-bg: rgb(33, 31, 31);
-  --github-bg-hover: #000000;
+  --github-bg-hover: rgb(0, 0, 0);
 
   --linkedin: rgb(225, 225, 225);
   --linkedin-bg: rgb(0, 119, 181);
   --linkedin-bg-hover: rgb(0, 97, 146);
 
-  --resume: rgb(24, 44, 67);
-  --resume-bg: rgb(46, 204, 113);
-  --resume-bg-hover: rgb(36, 174, 96);
+  --btn-bg: 255, 245, 238;
+  --btn-hover: 240, 255, 240;
 }
 
 .dark {
@@ -22,36 +21,41 @@
   --gmail-bg-hover: rgb(234, 67, 53);
 
   --github: rgb(255, 255, 255);
-  --github-bg: #000000;
+  --github-bg: rgb(0, 0, 0);
   --github-bg-hover: rgb(33, 31, 31);
 
   --linkedin: rgb(225, 225, 225);
   --linkedin-bg: rgb(0, 97, 146);
   --linkedin-bg-hover: rgb(0, 119, 181);
 
-  --resume: rgb(24, 44, 67);
-  --resume-bg: rgb(36, 174, 96);
-  --resume-bg-hover: rgb(46, 204, 113);
+  --btn-bg: 5, 5, 25;
+  --btn-hover: 10, 10, 45;
 }
 
 .bodyHome {
   width: 100%;
-  height: 90.5vh;
-  color: var(--primary-text);
+  height: 89.4vh;
 }
 
 .hero {
-  width: 100%;
-  margin-top: 27vh;
+  margin: auto;
+  height: 80vh;
 
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
+.hero h1,
+.hero h2 {
+  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
+}
+
 .socialLinks {
-  margin: auto;
-  margin-top: 5px;
+  margin: 0;
+  margin-top: 2px;
   width: 300px;
   gap: 17px;
   display: flex;
@@ -72,6 +76,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
 }
 
 .gmailBtn {
@@ -134,44 +139,25 @@
   transition: color 0.3s ease-in-out;
 }
 
-.resumeBtn {
-  background-color: var(--resume-bg);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-
-.resumeBtn:hover {
-  background-color: var(--resume-bg-hover);
-  transform: scale(1.05);
-}
-
-.resumeBtn:hover .resume {
-  color: var(--resume);
-}
-
-.resume {
-  color: var(--resume);
-  background: transparent;
-  transition: color 0.3s ease-in-out;
-}
-
 .navToAbout {
   cursor: pointer;
-  background-color: rgba(var(--background-nav), 0.8);
+  background-color: rgba(var(--btn-bg), 0.8);
   font-family: MarkerFelt-Thin, "Marker Felt";
   color: var(--primary-text);
   font-size: 16px;
   border-radius: 50px;
   height: 33px;
   width: 150px;
-  margin-top: 30px;
+  margin-top: 27px;
   justify-content: center;
   align-items: center;
   text-align: center;
   border: transparent;
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
   transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .navToAbout:hover {
-  background-color: rgba(var(--accent-hover), 0.6);
+  background-color: rgba(var(--btn-hover), 0.6);
   transform: scale(1.05);
 }
