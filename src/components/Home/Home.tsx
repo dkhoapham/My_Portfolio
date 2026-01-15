@@ -12,8 +12,7 @@ function Home() {
             fontWeight: "100",
             fontSize: "30px",
             margin: "0",
-          }}
-        >
+          }}>
           Hello World,
         </h2>
         <h1
@@ -21,34 +20,17 @@ function Home() {
             fontWeight: "100",
             fontSize: "60px",
             margin: "0",
-          }}
-        >
+          }}>
           I'm Khoa Pham!
         </h1>
         <div className="socialLinks">
           <button className="gmailBtn">
-            <TbMailbox
-              size={30}
-              className="gmail"
-              onClick={() =>
-                (window.location.href = "mailto:pham.dangkhoa.se@gmail.com")
-              }
-            />
+            <TbMailbox size={30} className="gmail" onClick={() => (window.location.href = "mailto:pham.dangkhoa.se@gmail.com")} />
           </button>
-          <button
-            className="githubBtn"
-            onClick={() =>
-              window.open("https://github.com/dkhoapham", "_blank")
-            }
-          >
+          <button className="githubBtn" onClick={() => window.open("https://github.com/dkhoapham", "_blank")}>
             <TbBrandGithub size={30} className="github" />
           </button>
-          <button
-            className="linkedinBtn"
-            onClick={() =>
-              window.open("https://www.linkedin.com/in/dkhoapham", "_blank")
-            }
-          >
+          <button className="linkedinBtn" onClick={() => window.open("https://www.linkedin.com/in/dkhoapham", "_blank")}>
             <TbBrandLinkedin size={30} className="linkedin" />
           </button>
         </div>

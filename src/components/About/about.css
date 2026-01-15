@@ -1,7 +1,11 @@
 :root {
+  --git: rgb(33, 31, 31);
+  --express: rgb(0, 0, 0);
 }
 
 .dark {
+  --git: rgb(255, 255, 255);
+  --express: rgb(255, 255, 255);
 }
 
 .bodyAbout {
@@ -200,12 +204,17 @@
   border: 1px black solid;
 }
 
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
 .carouselLang {
   width: 100%;
   display: flex;
   overflow: hidden;
   border: 1px red solid;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .carouselLang::-webkit-scrollbar {
@@ -226,7 +235,7 @@
   display: flex;
   overflow: hidden;
   border: 1px red solid;
-  overflow-x: auto;
+  overflow-x: hidden;
 }
 
 .carouselFramW::-webkit-scrollbar {

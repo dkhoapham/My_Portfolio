@@ -1,25 +1,23 @@
 import { useNavigate } from "react-router-dom";
 import "./about.css";
-import profilePicture from "../../assets/profilePicture.jpg";
 import {
+  CssIcon,
+  ExpressIcon,
+  GitIcon,
+  GithubIcon,
+  HtmlIcon,
+  JavaIcon,
+  JavaScriptIcon,
+  MongoIcon,
+  MySqlIcon,
+  NodeJsIcon,
+  PostgresqlIcon,
+  ReactIcon,
+  TailwindIcon,
+  TypeScriptIcon,
+  profilePicture,
   FaArrowRight,
-  FaJava,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaGithub,
-} from "react-icons/fa";
-import {
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiCss3,
-  SiTailwindcss,
-  SiExpress,
-  SiMysql,
-  SiMongodb,
-  SiPostgresql,
-} from "react-icons/si";
+} from "./iconImporter";
 
 function About() {
   const navigate = useNavigate();
@@ -46,30 +44,22 @@ function About() {
         <div className="profileAbout">
           <h1 className="profileAboutTitle">.about-Me</h1>
           <p className="profileAboutPara1">
-            &emsp;Hi there! I'm Khoa Pham, a sophomore at San Jose State
-            University, majoring in Software Engineering. I'm passionate about
-            building clean, intuitive, and reliable applications. My idea was
-            driven by curiosity and innovation, and at the end of the day, I'm
-            happy to turn it into a real, working product. Moreover, I aim to
-            apply cutting-edge technology to solve real-world problems, such as
-            healthcare and financial technology, and beyond.
+            &emsp;Hi there! I'm Khoa Pham, a sophomore at San Jose State University, majoring in Software Engineering. I'm passionate about building
+            clean, intuitive, and reliable applications. My idea was driven by curiosity and innovation, and at the end of the day, I'm happy to turn
+            it into a real, working product. Moreover, I aim to apply cutting-edge technology to solve real-world problems, such as healthcare and
+            financial technology, and beyond.
             <br />
             <br />
-            &emsp;Although technology is advancing at the blink of an eye, that
-            progress comes with new complexity, inefficiency, and unintended
-            consequences that can be reduced through careful thinking and
-            intentional design. As a software engineering student, I use my
-            growing knowledge of software design, problem-solving, and systems
-            thinking to break down issues and create solutions that improve how
-            people interact with technology.
+            &emsp;Although technology is advancing at the blink of an eye, that progress comes with new complexity, inefficiency, and unintended
+            consequences that can be reduced through careful thinking and intentional design. As a software engineering student, I use my growing
+            knowledge of software design, problem-solving, and systems thinking to break down issues and create solutions that improve how people
+            interact with technology.
             <br />
             <br />
-            &emsp;I'm seeking teams that support engineering growth and empower
-            builders to create products centered around real customer needs.
+            &emsp;I'm seeking teams that support engineering growth and empower builders to create products centered around real customer needs.
             <br />
             <br />
-            &emsp;I'm currently seeking new opportunities. If you're interested
-            in working together, I'd love to connect!
+            &emsp;I'm currently seeking new opportunities. If you're interested in working together, I'd love to connect!
           </p>
         </div>
       </div>
@@ -79,38 +69,46 @@ function About() {
           <div className="carouselLang">
             <div className="techStackLang">
               <span className="java">
-                <FaJava size={35} /> Java
+                <JavaIcon className="icon" />
+                Java
               </span>
               <span className="ts">
-                <SiTypescript size={35} /> TypeScript
+                <TypeScriptIcon className="icon" />
+                TypeScript
               </span>
               <span className="js">
-                <SiJavascript size={35} /> JavaScript
+                <JavaScriptIcon className="icon" />
+                JavaScript
               </span>
               <span className="html">
-                <SiHtml5 size={35} /> HTML
+                <HtmlIcon className="icon" />
+                HTML
               </span>
               <span className="css">
-                <SiCss3 size={35} />
+                <CssIcon className="icon" />
                 CSS
               </span>
             </div>
 
             <div aria-hidden className="techStackLang">
               <span className="java">
-                <FaJava size={35} /> Java
+                <JavaIcon className="icon" />
+                Java
               </span>
               <span className="ts">
-                <SiTypescript size={35} /> TypeScript
+                <TypeScriptIcon className="icon" />
+                TypeScript
               </span>
               <span className="js">
-                <SiJavascript size={35} /> JavaScript
+                <JavaScriptIcon className="icon" />
+                JavaScript
               </span>
               <span className="html">
-                <SiHtml5 size={35} /> HTML
+                <HtmlIcon className="icon" />
+                HTML
               </span>
               <span className="css">
-                <SiCss3 size={35} />
+                <CssIcon className="icon" />
                 CSS
               </span>
             </div>
@@ -119,78 +117,78 @@ function About() {
           <div className="carouselFramW">
             <div className="techStackFramW">
               <span className="react">
-                <FaReact size={35} />
+                <ReactIcon className="icon" />
                 React.js
               </span>
               <span className="nodeJs">
-                <FaNodeJs size={35} />
+                <NodeJsIcon className="icon" />
                 Node.js
               </span>
               <span className="express">
-                <SiExpress size={35} />
+                <ExpressIcon className="icon" fill="var(--express)" />
                 Express.js
               </span>
               <span className="tailwindCss">
-                <SiTailwindcss size={35} />
+                <TailwindIcon className="icon" />
                 TailwindCSS
               </span>
               <span className="git">
-                <FaGitAlt size={35} />
+                <GitIcon className="icon" />
                 Git
               </span>
               <span className="gitHub">
-                <FaGithub size={35} />
+                <GithubIcon className="icon" fill="var(--git)" />
                 GitHub
               </span>
               <span className="mySql">
-                <SiMysql size={35} />
+                <MySqlIcon className="icon" />
                 MySQL
               </span>
               <span className="postgreSql">
-                <SiPostgresql size={35} />
+                <PostgresqlIcon className="icon" />
                 PostgreSQL
               </span>
               <span className="mongoDb">
-                <SiMongodb size={35} />
+                <MongoIcon className="icon" />
                 MongoDB
               </span>
             </div>
 
             <div aria-hidden className="techStackFramW">
               <span className="react">
-                <FaReact size={35} />
+                <ReactIcon className="icon" />
                 React.js
               </span>
               <span className="nodeJs">
-                <FaNodeJs size={35} />
+                <NodeJsIcon className="icon" />
                 Node.js
               </span>
               <span className="express">
-                <SiExpress size={35} />
+                <ExpressIcon className="icon" fill="var(--express)" />
                 Express.js
               </span>
               <span className="tailwindCss">
-                <SiTailwindcss size={35} />
+                <TailwindIcon className="icon" />
                 TailwindCSS
               </span>
               <span className="git">
-                <FaGitAlt size={35} />
+                <GitIcon className="icon" />
                 Git
               </span>
               <span className="gitHub">
-                <FaGithub size={35} />
+                <GithubIcon className="icon" fill="var(--git)" />
                 GitHub
               </span>
               <span className="mySql">
-                <SiMysql size={35} />
+                <MySqlIcon className="icon" />
                 MySQL
               </span>
               <span className="postgreSql">
-                <SiPostgresql size={35} />
+                <PostgresqlIcon className="icon" />
                 PostgreSQL
               </span>
               <span className="mongoDb">
-                <SiMongodb size={35} />
+                <MongoIcon className="icon" />
                 MongoDB
               </span>
             </div>
