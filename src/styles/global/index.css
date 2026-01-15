@@ -17,7 +17,7 @@
 }
 
 .dark {
-  --background-color: 18, 22, 27;
+  --background-color: 7, 7, 7;
 
   --primary-text: 224, 241, 243;
   --secondary-text: 0, 53, 97;
@@ -38,7 +38,7 @@ body {
   /*font-family: "Indie Flower", cursive;*/
   font-family: MarkerFelt-Thin, "Marker Felt";
   line-height: 1.5;
-  font-weight: 100;
+  font-weight: 100 !important;
 
   background-color: rgb(var(--background-color));
   color: rgb(var(--primary-text));

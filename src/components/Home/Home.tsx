@@ -53,7 +53,7 @@ function Home() {
           </button>
         </div>
         <button className="navToAbout" onClick={() => navigate("/about")}>
-          Learn About Me?
+          .learn-About-Me?
         </button>
       </div>
     </div>
