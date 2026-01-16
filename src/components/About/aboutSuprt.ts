@@ -13,6 +13,7 @@ import MongoIcon from "../../assets/techStackIcon/mongodb.svg?react";
 import MySqlIcon from "../../assets/techStackIcon/mysql.svg?react";
 import NodeJsIcon from "../../assets/techStackIcon/nodejs.svg?react";
 import PostgresqlIcon from "../../assets/techStackIcon/postgresql.svg?react";
+import PythonIcon from "../../assets/techStackIcon/python.svg?react";
 import ReactIcon from "../../assets/techStackIcon/react.svg?react";
 import TailwindIcon from "../../assets/techStackIcon/tailwindcss.svg?react";
 import TypeScriptIcon from "../../assets/techStackIcon/typescript.svg?react";
@@ -29,6 +30,7 @@ export {
   MySqlIcon,
   NodeJsIcon,
   PostgresqlIcon,
+  PythonIcon,
   ReactIcon,
   TailwindIcon,
   TypeScriptIcon,

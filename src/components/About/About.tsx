@@ -12,6 +12,7 @@ import {
   MySqlIcon,
   NodeJsIcon,
   PostgresqlIcon,
+  PythonIcon,
   ReactIcon,
   TailwindIcon,
   TypeScriptIcon,
@@ -82,6 +83,10 @@ function About() {
                 <JavaIcon className="icon" />
                 Java
               </span>
+              <span className="python">
+                <PythonIcon className="icon" />
+                Python
+              </span>
               <span className="ts">
                 <TypeScriptIcon className="icon" />
                 TypeScript
@@ -104,6 +109,10 @@ function About() {
               <span className="java">
                 <JavaIcon className="icon" />
                 Java
+              </span>
+              <span className="python">
+                <PythonIcon className="icon" />
+                Python
               </span>
               <span className="ts">
                 <TypeScriptIcon className="icon" />

@@ -26,7 +26,7 @@
   --techCard-bg: rgb(30, 30, 35);
   --quote: rgb(120, 150, 180);
 
-  --heading-about: rgba(205, 205, 190, 0.9);
+  --heading-about: rgb(190, 195, 205, 0.9);
 
   --pill-bg: rgb(40, 50, 60);
 
@@ -51,11 +51,10 @@
 }
 
 .biography {
-  width: 750px;
+  width: 1024px;
   height: 530px;
   margin-top: 20px;
   gap: 20px;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -63,7 +62,7 @@
 }
 
 .profileCard {
-  width: 300px;
+  width: 325px;
   height: 500px;
   border-radius: 20px;
 
@@ -83,7 +82,7 @@ h3 {
 }
 
 .dailyQuote {
-  width: 290px;
+  width: 300px;
   font-size: 13px;
 
   height: 70px;
@@ -189,7 +188,7 @@ h3 {
 }
 
 .profileAbout {
-  width: 420px;
+  width: 680px;
   height: 500px;
   border-radius: 20px;
 
@@ -216,17 +215,17 @@ h3 {
 
 .profileAboutPara {
   width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
+  max-width: 600px;
+  margin: 13px auto;
   text-align: center;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 2;
   font-family: "Nunito", sans-serif;
-  font-size: small;
+  font-size: 14.5px;
 }
 
 .technology {
-  width: 750px;
+  width: 1024px;
   height: 210px;
   margin-top: 20px;
   gap: 10px;
@@ -240,7 +239,7 @@ h3 {
 }
 
 .techStack {
-  width: 750px;
+  width: 1024px;
   height: 150px;
 
   display: flex;
@@ -251,6 +250,7 @@ h3 {
 }
 
 .java,
+.python,
 .ts,
 .js,
 .html,
@@ -268,7 +268,7 @@ h3 {
   height: 40px;
   width: auto;
   gap: 13px;
-  padding: 0 15px;
+  padding: 0 20px;
   border-radius: 50px;
   display: flex;
   align-items: center;
@@ -287,7 +287,7 @@ h3 {
   height: 55px;
   width: 100%;
   display: flex;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 35%), linear-gradient(to left, transparent, black 35%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40%), linear-gradient(to left, transparent, black 40%);
   -webkit-mask-size: 100% 100%;
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
@@ -312,7 +312,7 @@ h3 {
   width: 100%;
   display: flex;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 35%), linear-gradient(to left, transparent, black 35%);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 40%), linear-gradient(to left, transparent, black 40%);
   -webkit-mask-size: 100% 100%;
   -webkit-mask-composite: source-in;
   mask-composite: intersect;
