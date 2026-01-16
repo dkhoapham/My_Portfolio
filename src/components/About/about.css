@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap");
 
 :root {
   --profileCard-bg: rgb(135, 206, 235);
@@ -7,10 +9,15 @@
   --techCard-bg: rgb(224, 224, 224);
   --quote: rgb(180, 190, 205);
 
-  --pill-bg: rgb(250, 249, 246);
+  --heading-about: rgb(57, 57, 57);
+
+  --pill-bg: rgb(245, 245, 245, 0.7);
 
   --git: rgb(33, 31, 31);
   --express: rgb(0, 0, 0);
+
+  --btn-transition: 255, 245, 238;
+  --btn-transition-hover: 240, 255, 240;
 }
 
 .dark {
@@ -19,10 +26,15 @@
   --techCard-bg: rgb(30, 30, 35);
   --quote: rgb(120, 150, 180);
 
-  --pill-bg: rgb(38, 38, 38);
+  --heading-about: rgba(205, 205, 190, 0.9);
+
+  --pill-bg: rgb(40, 50, 60);
 
   --git: rgb(255, 255, 255);
   --express: rgb(255, 255, 255);
+
+  --btn-transition: 35, 45, 60;
+  --btn-transition-hover: 35, 45, 60;
 }
 
 .bodyAbout {
@@ -161,9 +173,9 @@ h3 {
   align-items: center;
   justify-content: center;
   border: transparent;
-  font-family: MarkerFelt-Thin, "Marker Felt";
+  font-family: "Chewy", system-ui;
   color: var(--primary-text);
-  background-color: rgba(var(--btn-bg), 0.8);
+  background-color: rgba(var(--btn-transition), 0.5);
 
   border-radius: 20px;
   box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
@@ -172,7 +184,7 @@ h3 {
 
 .toResume:hover,
 .toPortfolio:hover {
-  background-color: rgba(var(--btn-hover), 1);
+  background-color: rgba(var(--btn-transition-hover), 0.8);
   transform: scale(1.05);
 }
 
@@ -192,12 +204,14 @@ h3 {
   box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
 }
 
+.technologyTitle,
 .profileAboutTitle {
   margin: 0;
   text-indent: 10px;
-  font-family: MarkerFelt-Thin, "Marker Felt";
+  font-family: "Chewy", system-ui;
+  color: var(--heading-about);
   text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
-  font-weight: 200;
+  text-align: start;
 }
 
 .profileAboutPara {
@@ -205,11 +219,9 @@ h3 {
   max-width: 400px;
   margin: 0 auto;
   text-align: center;
-  font-weight: 100;
+  font-weight: 400;
   line-height: 1.9;
   font-family: "Nunito", sans-serif;
-  font-weight: 300;
-  font-style: normal;
   font-size: small;
 }
 
@@ -225,15 +237,6 @@ h3 {
   align-items: start;
   background-color: var(--techCard-bg);
   box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
-}
-
-.technologyTitle {
-  margin: 0;
-  text-indent: 10px;
-  font-family: MarkerFelt-Thin, "Marker Felt";
-  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
-  font-weight: 200;
-  text-align: start;
 }
 
 .techStack {

@@ -28,8 +28,8 @@
   --linkedin-bg: rgb(0, 97, 146);
   --linkedin-bg-hover: rgb(0, 119, 181);
 
-  --btn-bg: 38, 38, 38;
-  --btn-hover: 55, 55, 55;
+  --btn-bg: 20, 25, 30;
+  --btn-hover: 35, 45, 55;
 }
 
 .bodyHome {
@@ -142,7 +142,7 @@
 .navToAbout {
   cursor: pointer;
   background-color: rgba(var(--btn-bg), 0.8);
-  font-family: MarkerFelt-Thin, "Marker Felt";
+  font-family: "Chewy", system-ui;
   color: var(--primary-text);
   font-size: 16px;
   border-radius: 50px;

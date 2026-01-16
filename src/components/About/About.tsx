@@ -25,7 +25,7 @@ function About() {
   const navigate = useNavigate();
   const title = useRotatingText(["Software Engineer", "Full Stack Developer", "Problem Solving Enthusiast", "Lifelong Learner"]);
   const todayIndex = new Date().getDate() % quotes.length;
-  const quote = quotes[5];
+  const quote = quotes[todayIndex];
 
   return (
     <div className="bodyAbout">
@@ -63,8 +63,8 @@ function About() {
             Although technology is advancing at the blink of an eye, that progress comes with{" "}
             <strong>new complexity, inefficiency, and unintended consequences</strong> that can be reduced through <strong>careful thinking</strong>{" "}
             and <strong>intentional design</strong>. As a software engineering student, I use my growing knowledge of <strong>software design</strong>
-            ,<strong>problem-solving</strong>, and <strong>systems thinking</strong> to break down issues and create solutions that improve how people
-            interact with technology.
+            , <strong>problem-solving</strong>, and <strong>systems thinking</strong> to break down issues and create solutions that improve how
+            people interact with technology.
             <br />
             I'm seeking teams that <strong>support engineering growth</strong> and <strong>empower builders</strong> to create products centered
             around <strong>real customer needs</strong>.
