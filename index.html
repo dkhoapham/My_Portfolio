@@ -7,9 +7,7 @@
     <title>Khoa Pham</title>
     <script>
       const userTheme = localStorage.theme;
-      const systemPrefersDark = window.matchMedia(
-        "(prefers-color-scheme: dark)"
-      ).matches;
+      const systemPrefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
       if (userTheme === "dark" || (!userTheme && systemPrefersDark)) {
         document.documentElement.classList.add("dark");
       } else {

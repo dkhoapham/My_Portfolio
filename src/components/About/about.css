@@ -1,9 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap");
+
 :root {
+  --profileCard-bg: rgb(135, 206, 235);
+  --aboutCard-bg: rgb(176, 216, 230);
+  --techCard-bg: rgb(224, 224, 224);
+  --quote: rgb(180, 190, 205);
+
+  --pill-bg: rgb(250, 249, 246);
+
   --git: rgb(33, 31, 31);
   --express: rgb(0, 0, 0);
 }
 
 .dark {
+  --profileCard-bg: rgb(90, 140, 200);
+  --aboutCard-bg: rgb(70, 130, 180);
+  --techCard-bg: rgb(30, 30, 35);
+  --quote: rgb(120, 150, 180);
+
+  --pill-bg: rgb(38, 38, 38);
+
   --git: rgb(255, 255, 255);
   --express: rgb(255, 255, 255);
 }
@@ -11,19 +28,20 @@
 .bodyAbout {
   width: 100%;
   height: 89.4vh;
-  border: 1px black solid;
 
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
 }
 
 .biography {
   width: 750px;
   height: 530px;
   margin-top: 20px;
-  border: 1px black solid;
   gap: 20px;
 
   display: flex;
@@ -36,13 +54,44 @@
   width: 300px;
   height: 500px;
   border-radius: 20px;
-  border: 1px black solid;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: start;
+
+  background-color: var(--profileCard-bg);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
+}
+
+.profileCard h1,
+h3 {
+  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
+}
+
+.dailyQuote {
+  width: 290px;
+  font-size: 13px;
+
+  height: 70px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  font-family: "Syne Mono", monospace;
+  line-height: 1.3;
+}
+
+.quoteLine {
+  margin: 0 10px 0;
+  border-radius: 10px;
+  background-color: var(--quote);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
 }
 
 .profilePicture {
@@ -50,7 +99,7 @@
   max-height: 200px;
 
   border-radius: 50%;
-  padding: 30px 0 20px;
+  padding: 10px 0 10px;
 }
 
 .profileName {
@@ -59,37 +108,36 @@
 
 .profileNamePrefer {
   margin: 0;
-  font-weight: 100;
+  font-weight: 300;
 }
 
 .profileHighlight {
   font-size: 17px;
-  padding: 40px 0 10px;
+  padding: 10px 0 10px;
+  position: relative;
+  display: inline-block;
+  font-family: "Sour Gummy", sans-serif;
+  font-optical-sizing: auto;
+  color: rgb(var(--primary-text));
 }
 
 .profileHighlight::after {
-  --text: "Software Engineer";
-  content: var(--text);
-  color: rgb(var(--primary-text));
-  animation: text 13s infinite;
+  content: attr(data-text);
+  color: rgba(var(--nav-txt), 0.7);
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s ease-out forwards;
 }
 
-@keyframes text {
-  0%,
-  25% {
-    --text: "Software Engineer";
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(7px);
   }
-  26%,
-  50% {
-    --text: "Full Stack Developer";
-  }
-  51%,
-  75% {
-    --text: "Problem Solving Enthusiast";
-  }
-  76%,
   100% {
-    --text: "Lifelong Learner";
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -100,26 +148,37 @@
   align-items: center;
   text-align: center;
   justify-content: center;
-  padding: 40px 0 20px;
+  padding: 15px 0 0;
 }
 
 .toResume,
 .toPortfolio {
+  cursor: pointer;
   width: 110px;
   height: 30px;
   gap: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: transparent;
   font-family: MarkerFelt-Thin, "Marker Felt";
+  color: var(--primary-text);
+  background-color: rgba(var(--btn-bg), 0.8);
 
   border-radius: 20px;
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.toResume:hover,
+.toPortfolio:hover {
+  background-color: rgba(var(--btn-hover), 1);
+  transform: scale(1.05);
 }
 
 .profileAbout {
   width: 420px;
   height: 500px;
-  border: 1px black solid;
   border-radius: 20px;
 
   display: flex;
@@ -127,23 +186,31 @@
   align-items: flex-start;
   text-align: left;
   justify-content: flex-start;
+
+  background-color: var(--aboutCard-bg);
+
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
 }
 
 .profileAboutTitle {
   margin: 0;
   text-indent: 10px;
-  border: 1px black solid;
+  font-family: MarkerFelt-Thin, "Marker Felt";
+  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
+  font-weight: 200;
 }
 
-.profileAboutPara1 {
+.profileAboutPara {
   width: 100%;
   max-width: 400px;
-  margin: 5px auto;
-  text-align: start;
-  font-size: small;
+  margin: 0 auto;
+  text-align: center;
   font-weight: 100;
-  line-height: 1.7;
-  border: 1px black solid;
+  line-height: 1.9;
+  font-family: "Nunito", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: small;
 }
 
 .technology {
@@ -152,24 +219,26 @@
   margin-top: 20px;
   gap: 10px;
   border-radius: 20px;
-  border: 1px black solid;
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: start;
+  background-color: var(--techCard-bg);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.3);
 }
 
 .technologyTitle {
   margin: 0;
   text-indent: 10px;
-  border: 1px black solid;
+  font-family: MarkerFelt-Thin, "Marker Felt";
+  text-shadow: 5px 2px 5px rgba(var(--shadow), 0.3);
+  font-weight: 200;
   text-align: start;
 }
 
 .techStack {
   width: 750px;
   height: 150px;
-  border: 1px black solid;
 
   display: flex;
   flex-direction: column;
@@ -193,27 +262,32 @@
 .postgreSql,
 .mongoDb {
   flex: 0 0 auto;
-  height: 45px;
+  height: 40px;
   width: auto;
-  gap: 7px;
+  gap: 13px;
   padding: 0 15px;
   border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border: 1px black solid;
+  background-color: var(--pill-bg);
+  text-shadow: none;
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.1);
 }
 
 .icon {
-  width: 35px;
-  height: 35px;
+  width: 27px;
+  height: 27px;
 }
 
 .carouselLang {
+  height: 55px;
   width: 100%;
   display: flex;
-  overflow: hidden;
-  border: 1px red solid;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 35%), linear-gradient(to left, transparent, black 35%);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
   overflow-x: hidden;
 }
 
@@ -227,14 +301,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: slide--X 7s infinite linear;
+  animation: slide--X 10s infinite linear;
 }
 
 .carouselFramW {
+  height: 55px;
   width: 100%;
   display: flex;
   overflow: hidden;
-  border: 1px red solid;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 35%), linear-gradient(to left, transparent, black 35%);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
   overflow-x: hidden;
 }
 
@@ -248,7 +326,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  animation: slide-X 7s infinite linear;
+  animation: slide-X 17s infinite linear;
 }
 
 @keyframes slide--X {

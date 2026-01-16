@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import { FaArrowRight } from "react-icons/fa";
 import profilePicture from "../../assets/profilePicture.jpg";
 import CssIcon from "../../assets/techStackIcon/css3.svg?react";
@@ -33,3 +35,27 @@ export {
   profilePicture,
   FaArrowRight,
 };
+
+export const useRotatingText = (items: string[], delay = 3000) => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex((i) => (i + 1) % items.length);
+    }, delay);
+    return () => clearInterval(id);
+  }, [items, delay]);
+  return items[index];
+};
+
+export const quotes = [
+  { text: "If you can't make it good, at least make it look good.", author: "Bill Gates" },
+  { text: "Never stop asking questions and seeking answers. Curiosity fuels progress.", author: "Jensen Huang" },
+  { text: "You can’t connect the dots looking forward; you can only connect them looking backward.", author: "Steve Jobs" },
+  { text: "Failure is not the end, it’s an opportunity to learn and grow.", author: "Jensen Huang" },
+  { text: "Quality is more important than quantity. One home run is much better than two doubles.", author: "Steve Jobs" },
+  {
+    text: "Success is a work in progress. It’s not about achieving a goal; it’s about constantly improving and pushing boundaries.",
+    author: "Jensen Huang",
+  },
+  { text: "The only way to do great work is to love what you do.", author: "Steve Jobs" },
+];

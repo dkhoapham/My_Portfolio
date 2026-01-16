@@ -17,19 +17,29 @@ import {
   TypeScriptIcon,
   profilePicture,
   FaArrowRight,
-} from "./iconImporter";
+  useRotatingText,
+  quotes,
+} from "./aboutSuprt";
 
 function About() {
   const navigate = useNavigate();
+  const title = useRotatingText(["Software Engineer", "Full Stack Developer", "Problem Solving Enthusiast", "Lifelong Learner"]);
+  const todayIndex = new Date().getDate() % quotes.length;
+  const quote = quotes[5];
 
   return (
     <div className="bodyAbout">
       <div className="biography">
         <div className="profileCard">
+          <p className="dailyQuote">
+            <span className="quoteLine">
+              “{quote.text}” — {quote.author}
+            </span>
+          </p>
           <img className="profilePicture" src={profilePicture}></img>
           <h1 className="profileName">Khoa Pham</h1>
           <h3 className="profileNamePrefer">(Kevin)</h3>
-          <span className="profileHighlight"></span>
+          <span className="profileHighlight" data-text={title} key={title}></span>
           <div className="profileDirectory">
             <button className="toResume" onClick={() => navigate("/resume")}>
               .my-Resume
@@ -43,23 +53,23 @@ function About() {
         </div>
         <div className="profileAbout">
           <h1 className="profileAboutTitle">.about-Me</h1>
-          <p className="profileAboutPara1">
-            &emsp;Hi there! I'm Khoa Pham, a sophomore at San Jose State University, majoring in Software Engineering. I'm passionate about building
-            clean, intuitive, and reliable applications. My idea was driven by curiosity and innovation, and at the end of the day, I'm happy to turn
-            it into a real, working product. Moreover, I aim to apply cutting-edge technology to solve real-world problems, such as healthcare and
-            financial technology, and beyond.
+          <p className="profileAboutPara">
+            Hi there! I'm <strong>Khoa Pham</strong>, a sophomore at <strong>San Jose State University</strong>, majoring in{" "}
+            <strong>Software Engineering</strong>. I'm passionate about building <strong>clean, intuitive, and reliable applications</strong>. My idea
+            was driven by <em>curiosity</em> and <em>innovation</em>, and at the end of the day, I'm happy to turn it into a{" "}
+            <strong>real, working product</strong>. Moreover, I aim to apply cutting-edge technology to solve real-world problems, such as{" "}
+            <u>healthcare</u> and <u>financial technology</u>, and beyond.
             <br />
-            <br />
-            &emsp;Although technology is advancing at the blink of an eye, that progress comes with new complexity, inefficiency, and unintended
-            consequences that can be reduced through careful thinking and intentional design. As a software engineering student, I use my growing
-            knowledge of software design, problem-solving, and systems thinking to break down issues and create solutions that improve how people
+            Although technology is advancing at the blink of an eye, that progress comes with{" "}
+            <strong>new complexity, inefficiency, and unintended consequences</strong> that can be reduced through <strong>careful thinking</strong>{" "}
+            and <strong>intentional design</strong>. As a software engineering student, I use my growing knowledge of <strong>software design</strong>
+            ,<strong>problem-solving</strong>, and <strong>systems thinking</strong> to break down issues and create solutions that improve how people
             interact with technology.
             <br />
+            I'm seeking teams that <strong>support engineering growth</strong> and <strong>empower builders</strong> to create products centered
+            around <strong>real customer needs</strong>.
             <br />
-            &emsp;I'm seeking teams that support engineering growth and empower builders to create products centered around real customer needs.
-            <br />
-            <br />
-            &emsp;I'm currently seeking new opportunities. If you're interested in working together, I'd love to connect!
+            I'm currently seeking <strong>new opportunities</strong>. If you're interested in working together, <em>I'd love to connect!</em>
           </p>
         </div>
       </div>
