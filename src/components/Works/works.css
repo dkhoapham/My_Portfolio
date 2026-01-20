@@ -1,0 +1,314 @@
+:root {
+  --project-card-bg: rgb(224, 228, 235);
+
+  --gear-color: rgb(90, 110, 140);
+
+  --techpill-bg: rgb(235, 240, 245);
+  --techpill-hover: rgb(220, 230, 240);
+
+  --proof-link-bg: rgb(210, 220, 230);
+  --proof-link-bg-hover: rgb(210, 220, 235);
+  --git: rgb(33, 31, 31);
+  --web-link: rgb(19, 19, 19);
+
+  --divider: rgba(120, 135, 150, 0.25);
+}
+
+.dark {
+  --project-card-bg: rgb(25, 28, 32);
+
+  --gear-color: rgb(60, 75, 100);
+
+  --techpill-bg: rgb(30, 35, 45);
+  --techpill-hover: rgb(45, 50, 60);
+
+  --proof-link-bg: rgb(35, 40, 50);
+  --proof-link-bg-hover: rgb(50, 55, 70);
+  --git: rgb(255, 255, 255);
+  --web-link: rgb(255, 255, 226);
+
+  --divider: rgba(180, 190, 205, 0.18);
+}
+
+.bodyWorks {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: normal;
+}
+
+.displayProjects {
+  width: 765px;
+  height: auto;
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.projects {
+  width: 735px;
+  height: auto;
+  margin: 15px 15px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  grid-auto-rows: auto;
+  align-items: stretch;
+}
+
+.project-card {
+  min-height: 350px;
+  width: 100%;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: var(--project-card-bg);
+  border-radius: 20px;
+
+  justify-self: center;
+  box-shadow: 0.2px 3px 6px 1px rgba(var(--shadow), 0.3);
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(var(--shadow), 0.35);
+}
+
+.projectImage {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.projectImage::before,
+.projectImage::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.projectImage::before {
+  background-image: url("../../assets/works/inProgressLightMode.png");
+  opacity: 1;
+}
+
+.projectImage::after {
+  background-image: url("../../assets/works/inProgressDarkMode.png");
+  opacity: 0;
+}
+
+html.dark .projectImage::after {
+  opacity: 1;
+}
+
+html.dark .projectImage::before {
+  opacity: 0;
+}
+
+.progressDotContainer {
+  color: rgb(15, 25, 20);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding-right: 3px;
+  line-height: normal;
+  height: 22px;
+  width: 50px;
+  background-color: rgba(46, 204, 113, 0.5);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.2);
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.progressGearContainer {
+  color: rgb(35, 30, 10);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  line-height: normal;
+  height: 22px;
+  width: 75px;
+  background-color: rgba(240, 200, 80, 0.5);
+  box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.2);
+  border-radius: 20px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+.progressDot {
+  color: #ff6b6b;
+  animation: pulseRed 2s infinite ease-in-out;
+}
+
+.progressGear {
+  color: var(--gear-color);
+  animation: spin 6s linear infinite;
+  transform-origin: center;
+}
+
+@keyframes pulseRed {
+  0% {
+    color: #ff6b6b;
+  }
+  50% {
+    color: #ff0000;
+  }
+  100% {
+    color: #ff6b6b;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.projectDescription {
+  height: 120px;
+  overflow-y: auto;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+
+  justify-content: flex-start;
+}
+
+.projectDescription h1,
+.projectDescription p {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.projectDescription h1 {
+  font-size: 23px;
+}
+
+.projectDescription p {
+  font-size: 15px;
+  margin: 7px 15px;
+}
+
+.projectTechStack {
+  height: auto;
+  flex: 1 1 0%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 10px 15px;
+  align-items: start;
+  justify-content: center;
+}
+
+.projectTechStack span {
+  height: 25px;
+  line-height: 1;
+  padding: 0 10px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--techpill-bg);
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.projectTechStack span:hover {
+  background-color: var(--techpill-hover);
+  transform: translateY(-1px);
+}
+
+.proofLinks {
+  flex: 0 0 auto;
+
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  gap: 20px;
+}
+
+.proofLinks span {
+  border-radius: 50px;
+  cursor: pointer;
+  height: 40px;
+  width: 120px;
+  gap: 10px;
+
+  background-color: var(--proof-link-bg);
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease-in-out;
+
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.proofLinks span:hover {
+  background-color: var(--proof-link-bg-hover);
+  transform: scale(1.025);
+}
+
+.gitLink {
+  color: var(--git);
+}
+
+.webLink {
+  color: var(--web-link);
+}
+
+.proofLinks span.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+  background-color: var(--proof-link-bg);
+  cursor: not-allowed;
+}
+
+.divider {
+  width: 90%;
+  height: 0.5px;
+  align-self: center;
+  background: var(--divider);
+}

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=Syne+Mono&display=swap");
+
 :root {
   --background-color: 240, 255, 255;
 
@@ -49,8 +51,12 @@ body {
 }
 
 body {
-  transition: background-color 0.4s ease, color 0.4s ease,
-    border-color 0.4s ease, fill 0.4s ease, stroke 0.4s ease;
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease,
+    fill 0.4s ease,
+    stroke 0.4s ease;
 }
 
 body:not(.loaded) {
