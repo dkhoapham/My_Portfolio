@@ -57,7 +57,8 @@
   position: relative;
   background: transparent;
   backdrop-filter: blur(10px);
-  box-shadow: 2px 1px 5px 1px rgba(var(--shadow), 0.15),
+  box-shadow:
+    2px 1px 5px 1px rgba(var(--shadow), 0.15),
     inset 0 4px 20px rgba(var(--accent), 0.25);
   overflow: hidden;
 }
@@ -71,8 +72,12 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  transition: background 0.1s ease, backdrop-filter 0.1s ease,
-    box-shadow 0.1s ease, transform 0.1s ease, opacity 0.2s ease;
+  transition:
+    background 0.1s ease,
+    backdrop-filter 0.1s ease,
+    box-shadow 0.1s ease,
+    transform 0.1s ease,
+    opacity 0.2s ease;
 }
 
 .nav_links li.fade-out {
@@ -83,7 +88,8 @@
 .nav_links li.active {
   background: rgba(var(--accent), 0.5);
   backdrop-filter: blur(10px);
-  box-shadow: 2px 1px 5px 1px rgba(var(--shadow), 0.15),
+  box-shadow:
+    2px 1px 5px 1px rgba(var(--shadow), 0.15),
     inset 0 4px 20px rgba(var(--accent), 0.3);
   overflow: hidden;
 }
@@ -96,13 +102,11 @@
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(
-    circle closest-side,
-    rgba(var(--accent-hover), 0.2),
-    transparent
-  );
+  background: radial-gradient(circle closest-side, rgba(var(--accent-hover), 0.2), transparent);
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease;
 }
 
 .nav_links:hover::before {
@@ -120,7 +124,9 @@
   height: 100%;
   line-height: 30px;
   border-radius: 77px;
-  transition: border-color 0.25s ease, transform 0.25s ease-in-out;
+  transition:
+    border-color 0.25s ease,
+    transform 0.25s ease-in-out;
 }
 
 .nav_links li a:hover,
@@ -156,7 +162,9 @@
   border-radius: 50%;
   background-color: rgba(var(--background-nav), 0.3);
   box-shadow: 0.1px 1px 5px 1.5px rgba(var(--shadow), 0.1);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   overflow: hidden;
 }
 
@@ -172,7 +180,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .theme_toggle_btn:hover {
@@ -188,7 +198,9 @@
   align-items: center;
   justify-content: center;
   background-color: var(--resume-bg);
-  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 }
 
 .resume_btn:hover {

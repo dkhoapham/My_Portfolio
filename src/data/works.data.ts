@@ -1,0 +1,32 @@
+export const projects = [
+  {
+    title: "🏦 FinLens",
+    description: "TBA",
+    status: "building",
+    tech: ["TBA"],
+    github: "https://google.com/",
+    disabledGit: "true",
+    live: "https://google.com/",
+    disabledWeb: "true",
+  },
+  {
+    title: "🔎 ReviewLens",
+    description: "TBA",
+    status: "building",
+    tech: ["TBA"],
+    github: "https://google.com/",
+    disabledGit: "true",
+    live: "https://google.com/",
+    disabledWeb: "true",
+  },
+  {
+    title: "🧑‍⚕️ MedAssist",
+    description: "TBA",
+    status: "building",
+    tech: ["TBA"],
+    github: "https://google.com/",
+    disabledGit: "true",
+    live: "https://google.com/",
+    disabledWeb: "true",
+  },
+];

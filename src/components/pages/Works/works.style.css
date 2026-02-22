@@ -6,8 +6,8 @@
   --techpill-bg: rgb(235, 240, 245);
   --techpill-hover: rgb(220, 230, 240);
 
-  --proof-link-bg: rgb(210, 220, 230);
-  --proof-link-bg-hover: rgb(210, 220, 235);
+  --project-link-bg: rgb(210, 220, 230);
+  --project-link-bg-hover: rgb(210, 220, 235);
   --git: rgb(33, 31, 31);
   --web-link: rgb(19, 19, 19);
 
@@ -22,15 +22,15 @@
   --techpill-bg: rgb(30, 35, 45);
   --techpill-hover: rgb(45, 50, 60);
 
-  --proof-link-bg: rgb(35, 40, 50);
-  --proof-link-bg-hover: rgb(50, 55, 70);
+  --project-link-bg: rgb(35, 40, 50);
+  --project-link-bg-hover: rgb(50, 55, 70);
   --git: rgb(255, 255, 255);
   --web-link: rgb(255, 255, 226);
 
   --divider: rgba(180, 190, 205, 0.18);
 }
 
-.bodyWorks {
+.work-container {
   width: 100%;
   height: auto;
 
@@ -45,8 +45,8 @@
   line-height: normal;
 }
 
-.displayProjects {
-  width: 765px;
+.projects-section {
+  width: 100%;
   height: auto;
   margin: 20px 20px;
   display: flex;
@@ -55,18 +55,34 @@
   align-items: center;
 }
 
+.projects-heading {
+  width: 100%;
+  max-width: 735px;
+  margin: 0 auto;
+  text-align: start;
+  font-family: "Chewy", system-ui;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .projects {
-  width: 735px;
-  height: auto;
-  margin: 15px 15px;
+  width: 100%;
+  max-width: 735px;
+  margin: 15px auto;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
   grid-auto-rows: auto;
   align-items: stretch;
+  justify-items: center;
 }
 
-.project-card {
+.project-cards:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+.project-cards {
   min-height: 350px;
   width: 100%;
   max-width: 350px;
@@ -86,12 +102,12 @@
     box-shadow 0.25s ease;
 }
 
-.project-card:hover {
+.project-cards:hover {
   transform: translateY(-6px);
   box-shadow: 0 8px 20px rgba(var(--shadow), 0.35);
 }
 
-.projectImage {
+.project-image {
   position: relative;
   width: 100%;
   height: 220px;
@@ -99,8 +115,8 @@
   overflow: hidden;
 }
 
-.projectImage::before,
-.projectImage::after {
+.project-image::before,
+.project-image::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -110,25 +126,25 @@
   transition: opacity 0.4s ease-in-out;
 }
 
-.projectImage::before {
-  background-image: url("../../assets/works/inProgressLightMode.png");
+.project-image::before {
+  background-image: url("../../../assets/works/inProgressLightMode.png");
   opacity: 1;
 }
 
-.projectImage::after {
-  background-image: url("../../assets/works/inProgressDarkMode.png");
+.project-image::after {
+  background-image: url("../../../assets/works/inProgressDarkMode.png");
   opacity: 0;
 }
 
-html.dark .projectImage::after {
+.dark .project-image::after {
   opacity: 1;
 }
 
-html.dark .projectImage::before {
+.dark .project-image::before {
   opacity: 0;
 }
 
-.progressDotContainer {
+.progress-dot-container {
   color: rgb(15, 25, 20);
   font-size: 13px;
   display: flex;
@@ -148,7 +164,7 @@ html.dark .projectImage::before {
   z-index: 1;
 }
 
-.progressGearContainer {
+.progress-gear-container {
   color: rgb(35, 30, 10);
   font-size: 13px;
   display: flex;
@@ -167,18 +183,18 @@ html.dark .projectImage::before {
   z-index: 1;
 }
 
-.progressDot {
+.progress-dot {
   color: #ff6b6b;
-  animation: pulseRed 2s infinite ease-in-out;
+  animation: pulse-red 2s infinite ease-in-out;
 }
 
-.progressGear {
+.progress-gear {
   color: var(--gear-color);
   animation: spin 6s linear infinite;
   transform-origin: center;
 }
 
-@keyframes pulseRed {
+@keyframes pulse-red {
   0% {
     color: #ff6b6b;
   }
@@ -199,7 +215,7 @@ html.dark .projectImage::before {
   }
 }
 
-.projectDescription {
+.project-description {
   height: 120px;
   overflow-y: auto;
   flex: 0 0 auto;
@@ -210,8 +226,8 @@ html.dark .projectImage::before {
   justify-content: flex-start;
 }
 
-.projectDescription h1,
-.projectDescription p {
+.project-description h1,
+.project-description p {
   margin: 0;
   padding: 0;
   display: -webkit-box;
@@ -220,16 +236,16 @@ html.dark .projectImage::before {
   overflow: hidden;
 }
 
-.projectDescription h1 {
+.project-description h1 {
   font-size: 23px;
 }
 
-.projectDescription p {
-  font-size: 15px;
+.project-description p {
+  font-size: 16px;
   margin: 7px 15px;
 }
 
-.projectTechStack {
+.project-tech-stack {
   height: auto;
   flex: 1 1 0%;
   display: flex;
@@ -240,7 +256,7 @@ html.dark .projectImage::before {
   justify-content: center;
 }
 
-.projectTechStack span {
+.project-tech-stack span {
   height: 25px;
   line-height: 1;
   padding: 0 10px;
@@ -254,12 +270,12 @@ html.dark .projectImage::before {
     transform 0.15s ease;
 }
 
-.projectTechStack span:hover {
+.project-tech-stack span:hover {
   background-color: var(--techpill-hover);
   transform: translateY(-1px);
 }
 
-.proofLinks {
+.project-links {
   flex: 0 0 auto;
 
   height: 60px;
@@ -269,14 +285,14 @@ html.dark .projectImage::before {
   gap: 20px;
 }
 
-.proofLinks span {
+.project-links span {
   border-radius: 50px;
   cursor: pointer;
   height: 40px;
   width: 120px;
   gap: 10px;
 
-  background-color: var(--proof-link-bg);
+  background-color: var(--project-link-bg);
   transition:
     background-color 0.2s ease,
     transform 0.2s ease-in-out;
@@ -286,23 +302,23 @@ html.dark .projectImage::before {
   display: flex;
 }
 
-.proofLinks span:hover {
-  background-color: var(--proof-link-bg-hover);
+.project-links span:hover {
+  background-color: var(--project-link-bg-hover);
   transform: scale(1.025);
 }
 
-.gitLink {
+.git-container {
   color: var(--git);
 }
 
-.webLink {
+.live-web-container {
   color: var(--web-link);
 }
 
-.proofLinks span.disabled {
+.project-links span.disabled {
   pointer-events: none;
   opacity: 0.5;
-  background-color: var(--proof-link-bg);
+  background-color: var(--project-link-bg);
   cursor: not-allowed;
 }
 
@@ -311,4 +327,44 @@ html.dark .projectImage::before {
   height: 0.5px;
   align-self: center;
   background: var(--divider);
+}
+
+.disabled-card {
+  pointer-events: none;
+  opacity: 0.75;
+  cursor: default;
+  filter: grayscale(30%);
+}
+
+.disabled-card:hover {
+  transform: none !important;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 760px) {
+  .work-container {
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+
+  .projects-section {
+    width: 100%;
+    max-width: 375px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .projects-heading {
+    width: 100%;
+    max-width: 350px;
+    text-align: start;
+    text-indent: 0;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 }

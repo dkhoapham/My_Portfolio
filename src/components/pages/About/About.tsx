@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./about.css";
+import { useTheme } from "../../../contexts/ThemeContext";
 import {
   CssIcon,
   ExpressIcon,
@@ -10,7 +11,8 @@ import {
   JavaScriptIcon,
   MongoIcon,
   MySqlIcon,
-  NodeJsIcon,
+  NodeJsLIcon,
+  NodeJsDIcon,
   PostgresqlIcon,
   PythonIcon,
   ReactIcon,
@@ -24,6 +26,7 @@ import {
 
 function About() {
   const navigate = useNavigate();
+  const { dark } = useTheme();
   const title = useRotatingText(["Software Engineer", "Full Stack Developer", "Problem Solving Enthusiast", "Lifelong Learner"]);
   const todayIndex = new Date().getDate() % quotes.length;
   const quote = quotes[todayIndex];
@@ -139,10 +142,7 @@ function About() {
                 <ReactIcon className="icon" />
                 React.js
               </span>
-              <span className="nodeJs">
-                <NodeJsIcon className="icon" />
-                Node.js
-              </span>
+              <span className="nodeJs"> {dark ? <NodeJsLIcon className="icon" /> : <NodeJsDIcon className="icon" />} Node.js</span>
               <span className="express">
                 <ExpressIcon className="icon" fill="var(--express)" />
                 Express.js
@@ -178,10 +178,7 @@ function About() {
                 <ReactIcon className="icon" />
                 React.js
               </span>
-              <span className="nodeJs">
-                <NodeJsIcon className="icon" />
-                Node.js
-              </span>
+              <span className="nodeJs"> {dark ? <NodeJsDIcon className="icon" /> : <NodeJsLIcon className="icon" />}Node.js</span>
               <span className="express">
                 <ExpressIcon className="icon" fill="var(--express)" />
                 Express.js
