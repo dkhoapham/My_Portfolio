@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 export function highlightNav() {
@@ -7,12 +7,10 @@ export function highlightNav() {
   useEffect(() => {
     const currentPath = location.pathname || "/";
     const oldActive = document.querySelector(".nav_links li.active");
-    const newActive = [...document.querySelectorAll(".nav_links li")].find(
-      (li) => {
-        const a = li.querySelector("a");
-        return a && a.getAttribute("href") === currentPath;
-      }
-    );
+    const newActive = [...document.querySelectorAll(".nav_links li")].find((li) => {
+      const a = li.querySelector("a");
+      return a && a.getAttribute("href") === currentPath;
+    });
 
     if (oldActive && oldActive !== newActive) {
       oldActive.classList.add("fade-out");

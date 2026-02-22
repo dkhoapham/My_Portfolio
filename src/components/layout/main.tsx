@@ -1,4 +1,3 @@
-import type React from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import NavBar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";

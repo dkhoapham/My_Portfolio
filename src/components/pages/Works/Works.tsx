@@ -15,7 +15,7 @@ function Works() {
         <section className="projects-section">
           <h1 className="projects-heading">.things-I've-Made</h1>
           <div className="projects">
-            {projects.map((p, i) => (
+            {projects.map((p) => (
               <div className={`project-cards ${p.status === "building" ? "disabled-card" : ""}`}>
                 <div className="project-image" style={{ cursor: "default" }}>
                   {p.status === "live" ? liveStatus() : buildingStatus()}
