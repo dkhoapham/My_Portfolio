@@ -10,6 +10,6 @@ import "./styles/global/index.css";
   },
 };*/
 
-export default function App({ children }: { children: React.ReactNode }) {
-  return <Main>{children}</Main>;
+export default function App() {
+  return <Main />;
 }
