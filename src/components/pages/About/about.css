@@ -81,7 +81,6 @@ h3 {
   font-size: 13px;
 
   height: 70px;
-  overflow: hidden;
 
   display: flex;
   flex-direction: column;
@@ -344,5 +343,98 @@ h3 {
   }
   to {
     translate: -100%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .bodyAbout {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .biography {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    margin-top: 10px;
+    gap: 15px;
+  }
+
+  .profileCard {
+    width: 95%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+
+  .profilePicture {
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .dailyQuote {
+    width: 90%;
+    height: auto;
+    font-size: 12px;
+  }
+
+  .profileAbout {
+    width: 90%;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .profileAboutPara {
+    max-width: 100%;
+    margin: 10px 0;
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .technology {
+    width: 90%;
+    height: auto;
+    padding: 15px 10px;
+  }
+
+  .techStack {
+    width: 100%;
+    height: auto;
+    gap: 20px;
+  }
+
+  .carouselLang,
+  .carouselFramW {
+    height: 50px;
+  }
+
+  .techStackLang,
+  .techStackFramW {
+    gap: 25px;
+    padding-right: 25px;
+  }
+
+  .java,
+  .python,
+  .ts,
+  .js,
+  .html,
+  .css,
+  .react,
+  .nodeJs,
+  .express,
+  .tailwindCss,
+  .git,
+  .gitHub,
+  .mySql,
+  .postgreSql,
+  .mongoDb {
+    height: 35px;
+    padding: 0 15px;
+    gap: 10px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
   }
 }
