@@ -5,6 +5,7 @@ import Home from "../pages/Home/Home";
 import About from "../pages/About/About";
 import Works from "../pages/Works/Works";
 import Resume from "../pages/Resume/Resume";
+import NotFound from "../pages/NotFound/NotFound";
 import { ThemeProvider } from "../../contexts/ThemeContext";
 import { AnimatePresence } from "framer-motion";
 
@@ -17,6 +18,7 @@ const Main = () => {
 
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
+          <Route path="*" element={<NotFound />} />
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/works" element={<Works />} />
